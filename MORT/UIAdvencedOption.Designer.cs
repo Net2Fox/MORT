@@ -37,6 +37,15 @@ namespace MORT
             lbReProcessDic = new System.Windows.Forms.Label();
             udReProcessDicCount = new System.Windows.Forms.NumericUpDown();
             TransTab = new System.Windows.Forms.TabPage();
+            gbOneRing = new System.Windows.Forms.GroupBox();
+            tbOneRingURL = new System.Windows.Forms.TextBox();
+            label6 = new System.Windows.Forms.Label();
+            gbOneRingCode = new System.Windows.Forms.GroupBox();
+            label7 = new System.Windows.Forms.Label();
+            tbOneRingSource = new System.Windows.Forms.TextBox();
+            label8 = new System.Windows.Forms.Label();
+            tbOneRingTarget = new System.Windows.Forms.TextBox();
+            cbOneRingLanguageCode = new System.Windows.Forms.CheckBox();
             groupBox1 = new System.Windows.Forms.GroupBox();
             tbDl_Session = new System.Windows.Forms.TextBox();
             label5 = new System.Windows.Forms.Label();
@@ -148,19 +157,14 @@ namespace MORT
             cbGoogleOcrPriority = new System.Windows.Forms.CheckBox();
             fontDialog = new System.Windows.Forms.FontDialog();
             colorDialog1 = new System.Windows.Forms.ColorDialog();
-            gbOneRing = new System.Windows.Forms.GroupBox();
-            tbOneRingURL = new System.Windows.Forms.TextBox();
-            label6 = new System.Windows.Forms.Label();
-            gbOneRingCode = new System.Windows.Forms.GroupBox();
-            label7 = new System.Windows.Forms.Label();
-            tbOneRingSource = new System.Windows.Forms.TextBox();
-            label8 = new System.Windows.Forms.Label();
-            tbOneRingTarget = new System.Windows.Forms.TextBox();
-            cbOneRingLanguageCode = new System.Windows.Forms.CheckBox();
+            tbOneRingPlugin = new System.Windows.Forms.TextBox();
+            label9 = new System.Windows.Forms.Label();
             DicTab.SuspendLayout();
             gbDic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)udReProcessDicCount).BeginInit();
             TransTab.SuspendLayout();
+            gbOneRing.SuspendLayout();
+            gbOneRingCode.SuspendLayout();
             groupBox1.SuspendLayout();
             gbCustomApi.SuspendLayout();
             gbCustomApiCode.SuspendLayout();
@@ -197,8 +201,6 @@ namespace MORT
             gbClipboardSave.SuspendLayout();
             gbGoogleOcr.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)udGoogleOcrLimit).BeginInit();
-            gbOneRing.SuspendLayout();
-            gbOneRingCode.SuspendLayout();
             SuspendLayout();
             // 
             // btnApply
@@ -306,6 +308,102 @@ namespace MORT
             TransTab.TabIndex = 18;
             TransTab.Text = "번역 설정";
             TransTab.UseVisualStyleBackColor = true;
+            // 
+            // gbOneRing
+            // 
+            gbOneRing.Controls.Add(tbOneRingPlugin);
+            gbOneRing.Controls.Add(label9);
+            gbOneRing.Controls.Add(tbOneRingURL);
+            gbOneRing.Controls.Add(label6);
+            gbOneRing.Controls.Add(gbOneRingCode);
+            gbOneRing.Controls.Add(cbOneRingLanguageCode);
+            gbOneRing.Location = new System.Drawing.Point(23, 1151);
+            gbOneRing.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            gbOneRing.Name = "gbOneRing";
+            gbOneRing.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            gbOneRing.Size = new System.Drawing.Size(813, 308);
+            gbOneRing.TabIndex = 73;
+            gbOneRing.TabStop = false;
+            gbOneRing.Text = "OneRingTranslator API";
+            // 
+            // tbOneRingURL
+            // 
+            tbOneRingURL.Location = new System.Drawing.Point(77, 209);
+            tbOneRingURL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tbOneRingURL.Name = "tbOneRingURL";
+            tbOneRingURL.Size = new System.Drawing.Size(409, 27);
+            tbOneRingURL.TabIndex = 4;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new System.Drawing.Point(24, 214);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(46, 20);
+            label6.TabIndex = 4;
+            label6.Text = "URL : ";
+            // 
+            // gbOneRingCode
+            // 
+            gbOneRingCode.Controls.Add(label7);
+            gbOneRingCode.Controls.Add(tbOneRingSource);
+            gbOneRingCode.Controls.Add(label8);
+            gbOneRingCode.Controls.Add(tbOneRingTarget);
+            gbOneRingCode.Location = new System.Drawing.Point(17, 83);
+            gbOneRingCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            gbOneRingCode.Name = "gbOneRingCode";
+            gbOneRingCode.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            gbOneRingCode.Size = new System.Drawing.Size(469, 101);
+            gbOneRingCode.TabIndex = 72;
+            gbOneRingCode.TabStop = false;
+            gbOneRingCode.Text = "언어 코드";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new System.Drawing.Point(7, 68);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(61, 20);
+            label7.TabIndex = 3;
+            label7.Text = "Target : ";
+            // 
+            // tbOneRingSource
+            // 
+            tbOneRingSource.Location = new System.Drawing.Point(79, 27);
+            tbOneRingSource.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tbOneRingSource.Name = "tbOneRingSource";
+            tbOneRingSource.Size = new System.Drawing.Size(114, 27);
+            tbOneRingSource.TabIndex = 2;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new System.Drawing.Point(7, 32);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(65, 20);
+            label8.TabIndex = 1;
+            label8.Text = "Source : ";
+            // 
+            // tbOneRingTarget
+            // 
+            tbOneRingTarget.Location = new System.Drawing.Point(79, 63);
+            tbOneRingTarget.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tbOneRingTarget.Name = "tbOneRingTarget";
+            tbOneRingTarget.Size = new System.Drawing.Size(114, 27);
+            tbOneRingTarget.TabIndex = 0;
+            // 
+            // cbOneRingLanguageCode
+            // 
+            cbOneRingLanguageCode.AutoSize = true;
+            cbOneRingLanguageCode.Font = new System.Drawing.Font("Malgun Gothic", 9F);
+            cbOneRingLanguageCode.Location = new System.Drawing.Point(17, 50);
+            cbOneRingLanguageCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            cbOneRingLanguageCode.Name = "cbOneRingLanguageCode";
+            cbOneRingLanguageCode.Size = new System.Drawing.Size(276, 24);
+            cbOneRingLanguageCode.TabIndex = 4;
+            cbOneRingLanguageCode.Text = "구글 번역기와 동일한 언어코드 사용";
+            cbOneRingLanguageCode.UseVisualStyleBackColor = true;
+            cbOneRingLanguageCode.CheckedChanged += cbOneRingiLanguageCode_CheckedChanged;
             // 
             // groupBox1
             // 
@@ -1590,99 +1688,22 @@ namespace MORT
             // 
             fontDialog.Font = new System.Drawing.Font("Malgun Gothic", 11.25F);
             // 
-            // gbOneRing
+            // tbOneRingPlugin
             // 
-            gbOneRing.Controls.Add(tbOneRingURL);
-            gbOneRing.Controls.Add(label6);
-            gbOneRing.Controls.Add(gbOneRingCode);
-            gbOneRing.Controls.Add(cbOneRingLanguageCode);
-            gbOneRing.Location = new System.Drawing.Point(23, 1151);
-            gbOneRing.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gbOneRing.Name = "gbOneRing";
-            gbOneRing.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gbOneRing.Size = new System.Drawing.Size(813, 308);
-            gbOneRing.TabIndex = 73;
-            gbOneRing.TabStop = false;
-            gbOneRing.Text = "OneRingTranslator API";
+            tbOneRingPlugin.Location = new System.Drawing.Point(150, 244);
+            tbOneRingPlugin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tbOneRingPlugin.Name = "tbOneRingPlugin";
+            tbOneRingPlugin.Size = new System.Drawing.Size(336, 27);
+            tbOneRingPlugin.TabIndex = 73;
             // 
-            // tbOneRingURL
+            // label9
             // 
-            tbOneRingURL.Location = new System.Drawing.Point(77, 209);
-            tbOneRingURL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            tbOneRingURL.Name = "tbOneRingURL";
-            tbOneRingURL.Size = new System.Drawing.Size(409, 27);
-            tbOneRingURL.TabIndex = 4;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(24, 214);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(46, 20);
-            label6.TabIndex = 4;
-            label6.Text = "URL : ";
-            // 
-            // gbOneRingCode
-            // 
-            gbOneRingCode.Controls.Add(label7);
-            gbOneRingCode.Controls.Add(tbOneRingSource);
-            gbOneRingCode.Controls.Add(label8);
-            gbOneRingCode.Controls.Add(tbOneRingTarget);
-            gbOneRingCode.Location = new System.Drawing.Point(17, 83);
-            gbOneRingCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gbOneRingCode.Name = "gbOneRingCode";
-            gbOneRingCode.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gbOneRingCode.Size = new System.Drawing.Size(469, 101);
-            gbOneRingCode.TabIndex = 72;
-            gbOneRingCode.TabStop = false;
-            gbOneRingCode.Text = "언어 코드";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new System.Drawing.Point(7, 68);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(61, 20);
-            label7.TabIndex = 3;
-            label7.Text = "Target : ";
-            // 
-            // tbOneRingSource
-            // 
-            tbOneRingSource.Location = new System.Drawing.Point(79, 27);
-            tbOneRingSource.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            tbOneRingSource.Name = "tbOneRingSource";
-            tbOneRingSource.Size = new System.Drawing.Size(114, 27);
-            tbOneRingSource.TabIndex = 2;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new System.Drawing.Point(7, 32);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(65, 20);
-            label8.TabIndex = 1;
-            label8.Text = "Source : ";
-            // 
-            // tbOneRingTarget
-            // 
-            tbOneRingTarget.Location = new System.Drawing.Point(79, 63);
-            tbOneRingTarget.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            tbOneRingTarget.Name = "tbOneRingTarget";
-            tbOneRingTarget.Size = new System.Drawing.Size(114, 27);
-            tbOneRingTarget.TabIndex = 0;
-            // 
-            // cbOneRingLanguageCode
-            // 
-            cbOneRingLanguageCode.AutoSize = true;
-            cbOneRingLanguageCode.Font = new System.Drawing.Font("Malgun Gothic", 9F);
-            cbOneRingLanguageCode.Location = new System.Drawing.Point(17, 50);
-            cbOneRingLanguageCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            cbOneRingLanguageCode.Name = "cbOneRingLanguageCode";
-            cbOneRingLanguageCode.Size = new System.Drawing.Size(276, 24);
-            cbOneRingLanguageCode.TabIndex = 4;
-            cbOneRingLanguageCode.Text = "구글 번역기와 동일한 언어코드 사용";
-            cbOneRingLanguageCode.UseVisualStyleBackColor = true;
-            cbOneRingLanguageCode.CheckedChanged += cbOneRingiLanguageCode_CheckedChanged;
+            label9.AutoSize = true;
+            label9.Location = new System.Drawing.Point(24, 247);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(127, 20);
+            label9.TabIndex = 74;
+            label9.Text = "Translator plugin :";
             // 
             // UIAdvencedOption
             // 
@@ -1705,6 +1726,10 @@ namespace MORT
             gbDic.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)udReProcessDicCount).EndInit();
             TransTab.ResumeLayout(false);
+            gbOneRing.ResumeLayout(false);
+            gbOneRing.PerformLayout();
+            gbOneRingCode.ResumeLayout(false);
+            gbOneRingCode.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             gbCustomApi.ResumeLayout(false);
@@ -1758,10 +1783,6 @@ namespace MORT
             gbGoogleOcr.ResumeLayout(false);
             gbGoogleOcr.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)udGoogleOcrLimit).EndInit();
-            gbOneRing.ResumeLayout(false);
-            gbOneRing.PerformLayout();
-            gbOneRingCode.ResumeLayout(false);
-            gbOneRingCode.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1894,5 +1915,7 @@ namespace MORT
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbOneRingTarget;
         private System.Windows.Forms.CheckBox cbOneRingLanguageCode;
+        private System.Windows.Forms.TextBox tbOneRingPlugin;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -839,6 +839,7 @@ namespace MORT
                 string url = AdvencedOptionManager.OneRingTranslatorUrl;
                 string source = AdvencedOptionManager.OneRingTranslatorLanguageSource;
                 string target = AdvencedOptionManager.OneRingTranslatorLanguageTarget;
+                string translatorPlugin = AdvencedOptionManager.OneRingTranslatorPlugin;
 
                 if (AdvencedOptionManager.OneRingUseGoogleLanguageCode)
                 {
@@ -846,7 +847,7 @@ namespace MORT
                     target = MySettingManager.GoogleResultCode;
                 }
 
-                TransManager.Instace.InitOneRingTranslatorAPI(url, source, target);
+                TransManager.Instace.InitOneRingTranslatorAPI(url, source, target, translatorPlugin);
             }
             else if(MySettingManager.NowTransType == SettingManager.TransType.deeplx)
             {

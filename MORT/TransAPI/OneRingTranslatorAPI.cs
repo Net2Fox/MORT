@@ -10,12 +10,14 @@ namespace MORT.TransAPI
         private string _url;
         private string _transCode;
         private string _resultCode;
+        private string _translatorPlugin;
 
-        public void Init(string url, string transCode, string resultCode)
+        public void Init(string url, string transCode, string resultCode, string translatorPlugin)
         {
             _url = url; //example http://127.0.0.1:4990/translate
             _transCode = transCode;
             _resultCode = resultCode;
+            _translatorPlugin = translatorPlugin;
         }
 
         public string GetResult(string original, ref bool isError)
@@ -39,6 +41,11 @@ namespace MORT.TransAPI
                 .AddParameter("text", original)
                 .AddParameter("from_lang", _transCode)
                 .AddParameter("to_lang", _resultCode);
+
+            if(!string.IsNullOrWhiteSpace(_translatorPlugin))
+            {
+                request.AddParameter("translator_plugin", _translatorPlugin);
+            }
 
 
             IRestResponse response = client.Execute(request);

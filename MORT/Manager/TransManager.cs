@@ -136,9 +136,9 @@ namespace MORT
             _customAPI.Init(url, source, target);
         }
 
-        public void InitOneRingTranslatorAPI(string url, string source, string target)
+        public void InitOneRingTranslatorAPI(string url, string source, string target, string translatorPlugin)
         {
-            _oneRingTranslatorAPI.Init(url, source, target);
+            _oneRingTranslatorAPI.Init(url, source, target, translatorPlugin);
         }
 
         public void InitDeepLX(string source, string target, SettingManager.DeepLXEndpointType endpointType, string url, string dl_session)

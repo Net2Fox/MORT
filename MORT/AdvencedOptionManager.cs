@@ -144,6 +144,7 @@ namespace MORT
         public const string KeyOneRingLanguageSource = "@ONERINGTRANSLATOR_LANGUAGE_SOURCE ";
         public const string KeyOneRingLanguageTarget = "@ONERINGTRANSLATOR_LANGUAGE_TARGET ";
         public const string KeyOneRingUrl = "@ONERINGTRANSLATOR_URL ";
+        public const string KeyOneRingPlugin = "@ONERINGTRANSLATOR_PLUGIN ";
 
         public const string KeyDeepLXDLSession = "@DEEPLX_DL_SEESION ";
         public const string KeyDeepLXApiUrl = "@DEEPLX_API_URL ";
@@ -231,6 +232,7 @@ namespace MORT
             public ISettingData<string> OneRingTranslatorLanguageSource;
             public ISettingData<string> OneRingTranslatorLanguageTarget;
             public ISettingData<string> OneRingTranslatorUrl;
+            public ISettingData<string> OneRingTranslatorPlugin;
 
             //DeepLX
             public ISettingData<string> DeepLXApiUrl;
@@ -406,6 +408,7 @@ namespace MORT
         public static string OneRingTranslatorLanguageSource => data.OneRingTranslatorLanguageSource.Value;
         public static string OneRingTranslatorLanguageTarget => data.OneRingTranslatorLanguageTarget.Value;
         public static string OneRingTranslatorUrl => data.OneRingTranslatorUrl.Value;
+        public static string OneRingTranslatorPlugin => data.OneRingTranslatorPlugin.Value;
 
         //DeepLX
         public static string DeepLXApiUrl => data.DeepLXApiUrl.Value;
@@ -468,12 +471,13 @@ namespace MORT
             data.CustomApiUrl.Value = url;
         }
 
-        public static void SetOneRingTranslatorOption(bool useGoogleLanguageCode, string source, string target, string url)
+        public static void SetOneRingTranslatorOption(bool useGoogleLanguageCode, string source, string target, string url, string translatorPlugin)
         {
             data.OneRingUseGoogleLanguageCode.Value = useGoogleLanguageCode;
             data.OneRingTranslatorLanguageSource.Value = source;
             data.OneRingTranslatorLanguageTarget.Value = target;
             data.OneRingTranslatorUrl.Value = url;
+            data.OneRingTranslatorPlugin.Value = translatorPlugin;
         }
 
         public static void SetDeepLXOption(string deeplx_api_url, string dl_seesion = "")
@@ -630,6 +634,7 @@ namespace MORT
             data.OneRingTranslatorLanguageSource = SettingDataFactory.Create<string>(KeyOneRingLanguageSource, data.ParseList, "en");
             data.OneRingTranslatorLanguageTarget = SettingDataFactory.Create<string>(KeyOneRingLanguageTarget, data.ParseList, "ko");
             data.OneRingTranslatorUrl = SettingDataFactory.Create<string>(KeyOneRingUrl, data.ParseList, "http://localhost:4990/translate");
+            data.OneRingTranslatorPlugin = SettingDataFactory.Create<string>(KeyOneRingPlugin, data.ParseList, "");
 
             data.DeepLXApiUrl = SettingDataFactory.Create<string>(KeyDeepLXApiUrl, data.ParseList, "http://localhost:1188");
             data.DeepLXDLSession = SettingDataFactory.Create<string>(KeyDeepLXDLSession, data.ParseList, "");

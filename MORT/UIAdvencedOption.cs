@@ -138,6 +138,7 @@ namespace MORT
             tbOneRingURL.Text = AdvencedOptionManager.OneRingTranslatorUrl;
             tbOneRingSource.Text = AdvencedOptionManager.OneRingTranslatorLanguageSource;
             tbOneRingTarget.Text = AdvencedOptionManager.OneRingTranslatorLanguageTarget;
+            tbOneRingPlugin.Text = AdvencedOptionManager.OneRingTranslatorPlugin;
 
             //DeepLX
             tbDeepLXURL.Text = AdvencedOptionManager.DeepLXApiUrl;
@@ -238,7 +239,7 @@ namespace MORT
             AdvencedOptionManager.SetDeeplOption(cbDeeplAltOption.Checked);
 
             AdvencedOptionManager.SetCustomApiOption(cbCustomApiLanguageCode.Checked, tbCustomApiSource.Text, tbCustomApiTarget.Text, tbCustomURL.Text);
-            AdvencedOptionManager.SetOneRingTranslatorOption(cbOneRingLanguageCode.Checked, tbOneRingSource.Text, tbOneRingTarget.Text, tbOneRingURL.Text);
+            AdvencedOptionManager.SetOneRingTranslatorOption(cbOneRingLanguageCode.Checked, tbOneRingSource.Text, tbOneRingTarget.Text, tbOneRingURL.Text, tbOneRingPlugin.Text);
             AdvencedOptionManager.SetDeepLXOption(tbDeepLXURL.Text, tbDl_Session.Text);
         }
 
