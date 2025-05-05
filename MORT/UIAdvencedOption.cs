@@ -128,15 +128,22 @@ namespace MORT
             cbDeeplAltOption.Checked = AdvencedOptionManager.UseDeeplAltOption;
 
             //커스텀 api
+            cbCustomApiLanguageCode.Checked = AdvencedOptionManager.UseGoogleLanguageCode;
             tbCustomURL.Text = AdvencedOptionManager.CustomApiUrl;
             tbCustomApiSource.Text = AdvencedOptionManager.CustomApiLanguageSource;
             tbCustomApiTarget.Text = AdvencedOptionManager.CustomApiLanguageTarget;
+
+            //OneRingTranslatoo
+            cbOneRingLanguageCode.Checked = AdvencedOptionManager.OneRingUseGoogleLanguageCode;
+            tbOneRingURL.Text = AdvencedOptionManager.OneRingTranslatorUrl;
+            tbOneRingSource.Text = AdvencedOptionManager.OneRingTranslatorLanguageSource;
+            tbOneRingTarget.Text = AdvencedOptionManager.OneRingTranslatorLanguageTarget;
 
             //DeepLX
             tbDeepLXURL.Text = AdvencedOptionManager.DeepLXApiUrl;
             tbDl_Session.Text = AdvencedOptionManager.DeepLXDLSession;
 
-            cbCustomApiLanguageCode.Checked = AdvencedOptionManager.UseGoogleLanguageCode;
+
 
 
             //구글 ocr 설정
@@ -159,8 +166,10 @@ namespace MORT
             InitAppLanguage();
 
             RenderCustomApiLanguageCode();
-            isInit = true;
 
+            RenderOneRingTranslatorLanguageCode();
+
+            isInit = true;
         }
 
         private void SetUpDownValue(NumericUpDown componet, int value)
@@ -229,7 +238,7 @@ namespace MORT
             AdvencedOptionManager.SetDeeplOption(cbDeeplAltOption.Checked);
 
             AdvencedOptionManager.SetCustomApiOption(cbCustomApiLanguageCode.Checked, tbCustomApiSource.Text, tbCustomApiTarget.Text, tbCustomURL.Text);
-        
+            AdvencedOptionManager.SetOneRingTranslatorOption(cbOneRingLanguageCode.Checked, tbOneRingSource.Text, tbOneRingTarget.Text, tbOneRingURL.Text);
             AdvencedOptionManager.SetDeepLXOption(tbDeepLXURL.Text, tbDl_Session.Text);
         }
 
@@ -696,6 +705,9 @@ namespace MORT
             gbCustomApiCode.LocalizeLabel("Adv Custom Api Language Code");
             cbCustomApiLanguageCode.LocalizeLabel("Adv Custom Api Use Google Language Code");
 
+            gbOneRingCode.LocalizeLabel("Adv Custom Api Language Code");
+            cbOneRingLanguageCode.LocalizeLabel("Adv Custom Api Use Google Language Code");
+
 
             //OCR 설정
             gbGoogleOcr.LocalizeLabel("Adv Google Ocr");
@@ -726,6 +738,14 @@ namespace MORT
         }
 
         private void cbCustomApiLanguageCode_CheckedChanged(object sender, EventArgs e) => RenderCustomApiLanguageCode();
+
+        private void RenderOneRingTranslatorLanguageCode()
+        {
+            gbOneRingCode.Enabled = !cbOneRingLanguageCode.Checked;
+        }
+
+        private void cbOneRingiLanguageCode_CheckedChanged(object sender, EventArgs e) => RenderOneRingTranslatorLanguageCode();
+
 
         private void ocrAreaBackgroundColor_Click(object sender, EventArgs e)
         {

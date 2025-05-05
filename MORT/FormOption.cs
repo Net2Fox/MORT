@@ -56,7 +56,7 @@ namespace MORT
                     rbDeepLXEndpointOfficial.Checked = true;
                     break;
             }
-                
+
 
                 checkStringUpper.Checked = MySettingManager.IsUseStringUpper;
             checkRGB.Checked = MySettingManager.NowIsUseRGBFlag;
@@ -834,7 +834,21 @@ namespace MORT
 
                 TransManager.Instace.InitCustomApi(url, source, target);
             }
-            else if (MySettingManager.NowTransType == SettingManager.TransType.deeplx)
+            else if (MySettingManager.NowTransType == SettingManager.TransType.oneRingTranslator)
+            {
+                string url = AdvencedOptionManager.OneRingTranslatorUrl;
+                string source = AdvencedOptionManager.OneRingTranslatorLanguageSource;
+                string target = AdvencedOptionManager.OneRingTranslatorLanguageTarget;
+
+                if (AdvencedOptionManager.OneRingUseGoogleLanguageCode)
+                {
+                    source = MySettingManager.GoogleTransCode;
+                    target = MySettingManager.GoogleResultCode;
+                }
+
+                TransManager.Instace.InitOneRingTranslatorAPI(url, source, target);
+            }
+            else if(MySettingManager.NowTransType == SettingManager.TransType.deeplx)
             {
                 string source = MySettingManager.DeepLTransCode;
                 string target = MySettingManager.DeepLResultCode;

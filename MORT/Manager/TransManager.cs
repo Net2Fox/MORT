@@ -121,6 +121,7 @@ namespace MORT
         private bool isTranslationDbStyle = false;
 
         private CustomAPI _customAPI = new CustomAPI();
+        private OneRingTranslatorAPI _oneRingTranslatorAPI = new OneRingTranslatorAPI();
         private DeepLXTranslateAPI _deeplxTranslateAPI = new DeepLXTranslateAPI();
         private DeepLTranslateAPI _deepLTranslateAPI = new DeepLTranslateAPI();
         private PipeServer.PipeServer _ezTransPipeServer = new PipeServer.PipeServer();
@@ -133,6 +134,11 @@ namespace MORT
         public void InitCustomApi(string url, string source, string target)
         {
             _customAPI.Init(url, source, target);
+        }
+
+        public void InitOneRingTranslatorAPI(string url, string source, string target)
+        {
+            _oneRingTranslatorAPI.Init(url, source, target);
         }
 
         public void InitDeepLX(string source, string target, SettingManager.DeepLXEndpointType endpointType, string url, string dl_session)
@@ -234,6 +240,7 @@ namespace MORT
             LoadFormerResultFile(SettingManager.TransType.naver);
             LoadFormerResultFile(SettingManager.TransType.deepl);
             LoadFormerResultFile(SettingManager.TransType.customApi);
+            LoadFormerResultFile(SettingManager.TransType.oneRingTranslator);
             LoadFormerResultFile(SettingManager.TransType.papago_web);
             LoadFormerResultFile(SettingManager.TransType.deeplx);
         }
@@ -254,6 +261,7 @@ namespace MORT
             Dictionary<string, string> basicDic = new Dictionary<string, string>();
             Dictionary<string, string> deeplDic = new Dictionary<string, string>();
             Dictionary<string, string> customDic = new Dictionary<string, string>();
+            Dictionary<string, string> oneRingTranslatorDic = new Dictionary<string, string>();
             Dictionary<string, string> papagoWebDic = new Dictionary<string, string>();
             Dictionary<string, string> deeplxDic = new Dictionary<string, string>();
 
@@ -262,6 +270,7 @@ namespace MORT
             dic.Add(SettingManager.TransType.google_url, basicDic);
             dic.Add(SettingManager.TransType.deepl, deeplDic);
             dic.Add(SettingManager.TransType.customApi, customDic);
+            dic.Add(SettingManager.TransType.oneRingTranslator, oneRingTranslatorDic);
             dic.Add(SettingManager.TransType.papago_web, papagoWebDic);
             dic.Add(SettingManager.TransType.deeplx, deeplxDic);
 
@@ -280,6 +289,7 @@ namespace MORT
             saveResultDic.Add(SettingManager.TransType.google_url, new List<KeyValuePair<string, string>>());
             saveResultDic.Add(SettingManager.TransType.deepl, new List<KeyValuePair<string, string>>());
             saveResultDic.Add(SettingManager.TransType.customApi, new List<KeyValuePair<string, string>>());
+            saveResultDic.Add(SettingManager.TransType.oneRingTranslator, new List<KeyValuePair<string, string>>());
             saveResultDic.Add(SettingManager.TransType.papago_web, new List<KeyValuePair<string, string>>());
             saveResultDic.Add(SettingManager.TransType.deeplx, new List<KeyValuePair<string, string>>());
         }
@@ -419,7 +429,7 @@ namespace MORT
                 {
                     resultDic[transType].Clear();
                     saveResultDic[transType].Clear();
-                    //파일을 열고 다 지운다.      
+                    //파일을 열고 다 지운다.
 
                     ClearFormerResultFile(transType);
                 }
@@ -581,11 +591,18 @@ namespace MORT
                             transResult = _customAPI.GetResult(ocrText, ref isError);
                             transResult = transResult.Replace("\r\n ", "\n").Replace("\n", System.Environment.NewLine);
                         }
-                        else if(transType == SettingManager.TransType.deepl)
+                        else if (transType == SettingManager.TransType.oneRingTranslator)
+                        {
+                            string customOcrText = ocrText.Replace("\r", "\\r").Replace("\n", "\\n");
+                            transResult = _oneRingTranslatorAPI.GetResult(customOcrText, ref isError);
+                            transResult = transResult.Replace("\\r\\n", System.Environment.NewLine);
+                            transResult = transResult.Replace("\\n", System.Environment.NewLine);
+                        }
+                        else if (transType == SettingManager.TransType.deepl)
                         {
                             transResult = _deepLTranslateAPI.DoTrans(ocrText, ref isError);
 
-                            if(isError && AdvencedOptionManager.UseDeeplAltOption)
+                            if (isError && AdvencedOptionManager.UseDeeplAltOption)
                             {
                                 isError = false;
                                 transResult = GoogleBasicTranslateAPI.instance.DoTrans(ocrText, ref isError);
@@ -854,7 +871,7 @@ namespace MORT
                     }
                 }
 
-                //구글 
+                //구글
                 if(obj.googleCode != "")
                 {
                     ComboboxItem item = new ComboboxItem();

@@ -169,6 +169,8 @@ namespace MORT
             lbBasicInfo = new System.Windows.Forms.Label();
             pnCustomApi = new System.Windows.Forms.Panel();
             lbCustomApiInformation = new System.Windows.Forms.Label();
+            pnOneRingTranslator = new System.Windows.Forms.Panel();
+            lbOneRingTranslatorInformation = new System.Windows.Forms.Label();
             tpText = new System.Windows.Forms.TabPage();
             panel5 = new System.Windows.Forms.Panel();
             panel17 = new System.Windows.Forms.Panel();
@@ -350,6 +352,7 @@ namespace MORT
             pnPapagoWeb.SuspendLayout();
             pnGoogleBasic.SuspendLayout();
             pnCustomApi.SuspendLayout();
+            pnOneRingTranslator.SuspendLayout();
             tpText.SuspendLayout();
             panel5.SuspendLayout();
             panel17.SuspendLayout();
@@ -1358,6 +1361,7 @@ namespace MORT
             pnTranslate.Controls.Add(pnPapagoWeb);
             pnTranslate.Controls.Add(pnGoogleBasic);
             pnTranslate.Controls.Add(pnCustomApi);
+            pnTranslate.Controls.Add(pnOneRingTranslator);
             pnTranslate.Location = new System.Drawing.Point(3, 164);
             pnTranslate.Name = "pnTranslate";
             pnTranslate.Size = new System.Drawing.Size(533, 217);
@@ -1470,7 +1474,7 @@ namespace MORT
             TransType_Combobox.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             TransType_Combobox.FormattingEnabled = true;
             TransType_Combobox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            TransType_Combobox.Items.AddRange(new object[] { "TRANSLATE GOOGLE", "TRANSLATE DB", "TRANSLATE PAPAGO WEB", "TRANSLATE NAVER", "TRANSLATE GOOGLE SHEET", "TRANSLATE DEEPL", "TRANSLATE DEEPLX", "TRANSLATE EZTRANS", "TRANSLATE CUSTOM API" });
+            TransType_Combobox.Items.AddRange(new object[] { "TRANSLATE GOOGLE", "TRANSLATE DB", "TRANSLATE PAPAGO WEB", "TRANSLATE NAVER", "TRANSLATE GOOGLE SHEET", "TRANSLATE DEEPL", "TRANSLATE DEEPLX", "TRANSLATE EZTRANS", "TRANSLATE CUSTOM API", "TRANSLATE ONERINGTRANSLATOR" });
             TransType_Combobox.Location = new System.Drawing.Point(105, 30);
             TransType_Combobox.Name = "TransType_Combobox";
             TransType_Combobox.Size = new System.Drawing.Size(165, 25);
@@ -1865,6 +1869,25 @@ namespace MORT
             lbCustomApiInformation.TabIndex = 17;
             lbCustomApiInformation.Text = "커스텀 API는 고급 설정에서 설정하시면 됩니다";
             lbCustomApiInformation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // TODO pnOneRingTranslator
+            // 
+            pnOneRingTranslator.Controls.Add(lbOneRingTranslatorInformation);
+            pnOneRingTranslator.Location = new System.Drawing.Point(7, 61);
+            pnOneRingTranslator.Name = "pnOneRingTranslator";
+            pnOneRingTranslator.Size = new System.Drawing.Size(483, 94);
+            pnOneRingTranslator.TabIndex = 56;
+            // 
+            // TODO lbOneRingTranslatorInformation
+            // 
+            lbOneRingTranslatorInformation.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lbOneRingTranslatorInformation.ForeColor = System.Drawing.Color.White;
+            lbOneRingTranslatorInformation.Location = new System.Drawing.Point(3, 8);
+            lbOneRingTranslatorInformation.Name = "lbOneRingTranslatorInformation";
+            lbOneRingTranslatorInformation.Size = new System.Drawing.Size(469, 34);
+            lbOneRingTranslatorInformation.TabIndex = 17;
+            lbOneRingTranslatorInformation.Text = "원링트랜스레이터 API는 고급 설정에서 설정할 수 있습니다.";
+            lbOneRingTranslatorInformation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tpText
             // 
@@ -3894,6 +3917,7 @@ namespace MORT
             pnPapagoWeb.ResumeLayout(false);
             pnGoogleBasic.ResumeLayout(false);
             pnCustomApi.ResumeLayout(false);
+            pnOneRingTranslator.ResumeLayout(false);
             tpText.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel17.ResumeLayout(false);
@@ -4244,6 +4268,8 @@ namespace MORT
         private System.Windows.Forms.Button btnCheckDeeplState;
         private System.Windows.Forms.Panel pnCustomApi;
         private System.Windows.Forms.Label lbCustomApiInformation;
+        private System.Windows.Forms.Panel pnOneRingTranslator;
+        private System.Windows.Forms.Label lbOneRingTranslatorInformation;
         private System.Windows.Forms.Panel pnDeepLX;
         private System.Windows.Forms.Label lbDeepLXEndpoint;
         private System.Windows.Forms.RadioButton rbDeepLXEndpointFree;

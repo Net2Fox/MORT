@@ -70,7 +70,7 @@ namespace MORT
             lbTransTypeTitle.LocalizeLabel("Panel Translate");
             lbAdjustImg.LocalizeLabel("Panel Adjust Img");
 
-            //기본설정 - OCR         
+            //기본설정 - OCR
             showOcrCheckBox.LocalizeLabel("Show OCR Result");
             saveOCRCheckBox.LocalizeLabel("Save OCR Result");
             isClipBoardcheckBox1.LocalizeLabel("OCR Clipboard");
@@ -103,7 +103,7 @@ namespace MORT
             //번역
             lbTransType.LocalizeLabel("Translation Type");
             TransType_Combobox.LocalizeItems();
-         
+
 
             lbBasicInfo.LocalizeLabel("Basic Translate Info");
             lbPapagoWebInfo.LocalizeLabel("Papago Web Translate Info");
@@ -121,7 +121,7 @@ namespace MORT
 
             //deeplX
             lbDeepLXEndpoint.LocalizeLabel("DeepLX Information");
-            
+
             rbDeepLXEndpointFree.LocalizeLabel("DeepLX Free");
             rbDeepLXEndpointOfficial.Anchor(rbDeepLXEndpointFree, 10);
             rbDeepLXEndpointOfficial.LocalizeLabel("DeeplX Endpoint Free");
@@ -146,9 +146,9 @@ namespace MORT
 
             //커스텀 api
             lbCustomApiInformation.LocalizeLabel("Custom Api Information");
-            
-            
-            //lbDeepLXInformation.LocalizeLabel("DeepLX Information");
+
+            // OneRingTranslator
+            lbOneRingTranslatorInformation.LocalizeLabel("OneRingTranslator Information");
 
 
             //이미지 보정

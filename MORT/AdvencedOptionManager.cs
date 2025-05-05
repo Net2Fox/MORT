@@ -75,10 +75,10 @@ namespace MORT
                 keyList.Clear();
                 this.keyResult = "";
             }
-          
+
 
             this.extraData = extraData;
-           
+
         }
 
     }
@@ -139,6 +139,11 @@ namespace MORT
         public const string KeyCustomApiLanguageSource = "@CUSTOM_API_LANGUAGE_SOURCE ";
         public const string KeyCustomApiLanguageTarget = "@CUSTOM_API_LANGUAGE_TARGET ";
         public const string KeyCustomApiUrl = "@CUSTOM_API_URL ";
+
+        public const string KeyEnableOneRingUseGoogleLanguageCode = "@ENABLE_ONERING_USE_GOOGLE_LANGUAGE_CODE ";   //커스텀 api - 언어 코드 구글과 동일하게 처리
+        public const string KeyOneRingLanguageSource = "@ONERINGTRANSLATOR_LANGUAGE_SOURCE ";
+        public const string KeyOneRingLanguageTarget = "@ONERINGTRANSLATOR_LANGUAGE_TARGET ";
+        public const string KeyOneRingUrl = "@ONERINGTRANSLATOR_URL ";
 
         public const string KeyDeepLXDLSession = "@DEEPLX_DL_SEESION ";
         public const string KeyDeepLXApiUrl = "@DEEPLX_API_URL ";
@@ -221,6 +226,12 @@ namespace MORT
             public ISettingData<string> CustomApiLanguageTarget;
             public ISettingData<string> CustomApiUrl;
 
+            //OneRingTranslator
+            public ISettingData<bool> OneRingUseGoogleLanguageCode;
+            public ISettingData<string> OneRingTranslatorLanguageSource;
+            public ISettingData<string> OneRingTranslatorLanguageTarget;
+            public ISettingData<string> OneRingTranslatorUrl;
+
             //DeepLX
             public ISettingData<string> DeepLXApiUrl;
             public ISettingData<string> DeepLXDLSession;
@@ -251,7 +262,7 @@ namespace MORT
             get { return data.EnableRTL?.Value ?? false; }
             set { data.EnableRTL.Value = value;}
         }
-     
+
 
         public static bool EnableYellowBorder
         {
@@ -390,6 +401,12 @@ namespace MORT
         public static string CustomApiLanguageTarget => data.CustomApiLanguageTarget.Value;
         public static string CustomApiUrl => data.CustomApiUrl.Value;
 
+        //OneRingTranslator
+        public static bool OneRingUseGoogleLanguageCode => data.OneRingUseGoogleLanguageCode.Value;
+        public static string OneRingTranslatorLanguageSource => data.OneRingTranslatorLanguageSource.Value;
+        public static string OneRingTranslatorLanguageTarget => data.OneRingTranslatorLanguageTarget.Value;
+        public static string OneRingTranslatorUrl => data.OneRingTranslatorUrl.Value;
+
         //DeepLX
         public static string DeepLXApiUrl => data.DeepLXApiUrl.Value;
         public static string DeepLXDLSession => data.DeepLXDLSession.Value;
@@ -421,7 +438,7 @@ namespace MORT
             data.BasicFont.Value = fontData;
             data.EnableAdvencedHideTransform.Value = enableAdvencedHideTransform;
         }
-        
+
         public static void SetTranslateMemory(bool enable, int limit, int time)
         {
             data.EnableTranslateMemory.Value = enable;
@@ -449,6 +466,14 @@ namespace MORT
             data.CustomApiLanguageSource.Value = source;
             data.CustomApiLanguageTarget.Value = target;
             data.CustomApiUrl.Value = url;
+        }
+
+        public static void SetOneRingTranslatorOption(bool useGoogleLanguageCode, string source, string target, string url)
+        {
+            data.OneRingUseGoogleLanguageCode.Value = useGoogleLanguageCode;
+            data.OneRingTranslatorLanguageSource.Value = source;
+            data.OneRingTranslatorLanguageTarget.Value = target;
+            data.OneRingTranslatorUrl.Value = url;
         }
 
         public static void SetDeepLXOption(string deeplx_api_url, string dl_seesion = "")
@@ -559,7 +584,7 @@ namespace MORT
                 string fileData = "";
                 if (r != null)
                 {
-                    fileData = r.ReadToEnd();                  
+                    fileData = r.ReadToEnd();
                 }
 
                 r.Close();
@@ -574,7 +599,7 @@ namespace MORT
                     {
                         obj.LoadValue(fileData);
                     }
-                }            
+                }
             }
 
             if(!Directory.Exists(GlobalDefine.ADVENCED_TRANSRATION_PATH))
@@ -600,6 +625,11 @@ namespace MORT
             data.CustomApiLanguageSource = SettingDataFactory.Create<string>(KeyCustomApiLanguageSource, data.ParseList, "en");
             data.CustomApiLanguageTarget = SettingDataFactory.Create<string>(KeyCustomApiLanguageTarget, data.ParseList, "ko");
             data.CustomApiUrl = SettingDataFactory.Create<string>(KeyCustomApiUrl, data.ParseList, "http://localhost:8080/translator");
+
+            data.OneRingUseGoogleLanguageCode = SettingDataFactory.Create<bool>(KeyEnableOneRingUseGoogleLanguageCode, data.ParseList, true);
+            data.OneRingTranslatorLanguageSource = SettingDataFactory.Create<string>(KeyOneRingLanguageSource, data.ParseList, "en");
+            data.OneRingTranslatorLanguageTarget = SettingDataFactory.Create<string>(KeyOneRingLanguageTarget, data.ParseList, "ko");
+            data.OneRingTranslatorUrl = SettingDataFactory.Create<string>(KeyOneRingUrl, data.ParseList, "http://localhost:4990/translate");
 
             data.DeepLXApiUrl = SettingDataFactory.Create<string>(KeyDeepLXApiUrl, data.ParseList, "http://localhost:1188");
             data.DeepLXDLSession = SettingDataFactory.Create<string>(KeyDeepLXDLSession, data.ParseList, "");
@@ -639,7 +669,7 @@ namespace MORT
             data.EnableYellowBorder = SettingDataFactory.Create<bool>(KEY_ENABLE_YELLOW_BORADER, data.ParseList, false);
             data.SelectOcrAreaBackColor = SettingDataFactory.Create<string>(KeySelectOcrAreaColor, data.ParseList, "");
             data.SelectOcrAreaBackgroundColor = SettingDataFactory.Create<string>(KeySelectOcrAreaBackgroundColor, data.ParseList, "");
-            
+
             // TODO : 시스템 언어에 따라 다르게 해줘야 한다
             data.EnableRTL = SettingDataFactory.Create<bool>(KeyEnableRTL, data.ParseList, false);
         }
@@ -647,11 +677,11 @@ namespace MORT
         private static void LoadClipboardSetting()
         {
             data.UseClipboardTrans = SettingDataFactory.Create<bool>(KEY_IS_USE_CLIPBOARD_TRANS, data.ParseList, false);
-            data.ShowClipboardOriginal = SettingDataFactory.Create<bool>(KEY_IS_SHOW_CLIPBOARD_ORIGINAL, data.ParseList, false); 
+            data.ShowClipboardOriginal = SettingDataFactory.Create<bool>(KEY_IS_SHOW_CLIPBOARD_ORIGINAL, data.ParseList, false);
             data.ShowClipboardProcessing = SettingDataFactory.Create<bool>(KEY_IS_SHOW_CLIPBOARD_PROICESSING, data.ParseList, false);
         }
 
-        private static void LoadClipboardSaveSetting() 
+        private static void LoadClipboardSaveSetting()
         {
             data.ClipboardSaveType = SettingDataFactory.Create<int>(KeyClipboardSaveType, data.ParseList, 0);
         }
@@ -686,7 +716,7 @@ namespace MORT
         {
             string result = "";
 
-           
+
             foreach(var obj in data.ParseList)
             {
                 result += obj.ToSave();

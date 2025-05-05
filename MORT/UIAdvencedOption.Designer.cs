@@ -1682,6 +1682,7 @@ namespace MORT
             cbOneRingLanguageCode.TabIndex = 4;
             cbOneRingLanguageCode.Text = "구글 번역기와 동일한 언어코드 사용";
             cbOneRingLanguageCode.UseVisualStyleBackColor = true;
+            cbOneRingLanguageCode.CheckedChanged += cbOneRingiLanguageCode_CheckedChanged;
             // 
             // UIAdvencedOption
             // 

@@ -81,6 +81,7 @@ Guaaaahhhhhh"
 ,TRANSLATE EZTRANS,이지트랜스(일본어전용),EzTrans(Japanese),イージートロピン（日本語 - のみ）,EzTrans（日语）,Easy Trospin (Jepang -Nanya),Легкий Тропин (только японский),TROSPINA FÁCIL (japonês -apenas),EzTrans (японська)
 ,TRANSLATE CUSTOM API,커스텀 API,Custom API,カスタムAPI,自定义API,API Kustom,Пользовательский API,API personalizada,Користувацьке API
 ,TRANSLATE DEEPLX,DeepLX,DeepLX,DeepLX,DeepLX,DeepLX,DeepLX,DeepLX,DeepLX
+,TRANSLATE ONERINGTRANSLATOR,OneRingTranslator,OneRingTranslator,OneRingTranslator,OneRingTranslator,OneRingTranslator,OneRingTranslator,OneRingTranslator,OneRingTranslator
 ,Basic Translate Info,"구글 기본 번역기의 고품질 번역은 시간당 100회까지만 적용되며
 초과시 낮은 품질로 번역됩니다.",High quality translations of Google's default translators are only applied up to 100 times per hour and translated into low quality when exceeded.,"Googleのデフォルト翻訳者の高品質の翻訳は、1時間あたり最大100回のみ適用されます。
 超えた場合、低品質に翻訳されます。",Google的默认翻译器的高质量翻译每小时只能使用100次，在超出时将转换为低质量翻译。,"Terjemahan berkualitas tinggi dari penerjemah default Google hanya diterapkan hingga 100 kali per jam.
@@ -94,7 +95,7 @@ Itu diterjemahkan ke kualitas rendah saat terlampaui.","Высококачест
 ,Papago Secret,Secret 키 :,Secret key:,秘密の鍵：,密钥：,Kunci rahasia:,Secret key:,Chave secreta:,Секретний ключ
 ,Key Manage,키 관리,"Key
 management",キー管理,密钥管理器,"Manajemen
-kunci","Ключевой 
+kunci","Ключевой
 менеджмент",Gerenciamento -chave,Керування ключами
 ,Sheet Address,시트 주소,Sheet address,シートアドレス,表地址,Alamat lembar,Листовый адрес,Endereço da folha,Посилання
 ,Sheet ID,Client ID,Client ID,クライアントID,客户端ID,ID Klien,ID клиента,ID do Cliente,ID клієнта
@@ -275,7 +276,7 @@ Se possível, use Tessract ou Winocr","В деяких ситуаціях роз
 Tank division!
 ","Preview Font setting results.
 Font and color do not apply to the dark translation window.
-{}     
+{}
 1 2 3 4 5 6
 Tank Division!
 ","設定結果をプレビューします。
@@ -358,7 +359,7 @@ Consulte o documento da API para o idioma para o qual você solicita.","Деяк
 ,Use TTS,TTS 사용,TTS use,TTSの使用,使用 TTS,Penggunaan TTS,ТТ используют,Uso de TTS,Використання TTS
 ,Wait End of TTS,음성이 끝날 때 까지 대기,Waiting until the end of the voice,声が終わるまで待ちます,等待语音结束,Tunggu sampai akhir suara,Подождите до конца голоса,Espere até o final da voz,Очікувати завершення озвучення
 ,,,,,,,,,
-,GDI Error Message,"GDI+ 가 작동하지 않습니다. 
+,GDI Error Message,"GDI+ 가 작동하지 않습니다.
 레이어 번역창의 일부 기능을 사용할 수 없습니다.
 해결법을 확인해 보겠습니까?","GDI+ does not work.
 Some features of the layer translation window are not available.
@@ -716,9 +717,9 @@ exclusion area",除外エリアを追加します,添加排除区域,Tambahkan a
 ,,,,,,,,,
 ,ColorGroupForm Title,색 그룹 편집,Color group editing,カラーグループの編集,颜色组编辑,Pengeditan grup warna,Цветная группа редактирование,Edição de grupo de cores,Редагування кольорів
 ,ColorGroupForm Reset Button,초기화,reset,リセット,重置,mengatur ulang,перезагрузить,reiniciar,скинути
-,ColorGroupForm Information,"참고 : 
+,ColorGroupForm Information,"참고 :
 
-색 그룹을 모두 해제하면 해당 OCR 영역은 
+색 그룹을 모두 해제하면 해당 OCR 영역은
 이미지 보정을 사용하지 않습니다
 ","reference :
 
@@ -955,6 +956,7 @@ ETC - 미분류,,,,,,,,,
 ,DeepL_RequireApply_Message,적용을 먼저 해주세요,Please apply first,最初に申請してください,请先应用,Harap lamar dulu,"Пожалуйста, подайте заявку в первую очередь","Por favor, aplique primeiro","Будь ласка, спочатку подайте заявку"
 ,,,,,,,,,
 ,Custom Api Information,고급 설정에서 커스텀 API를 설정할 수 있습니다,You can set a custom API in advanced settings.,高度な設定でカスタムAPIを設定できます。,在高级设置中，可以设置自定义API,Anda dapat mengatur API khusus di pengaturan lanjutan.,Вы можете установить пользовательский API в расширенных настройках.,Você pode definir uma API personalizada em configurações avançadas.,Ви можете налаштувати власний API у розширених налаштуваннях
+,OneRingTranslator Information,고급 설정에서 원링 번역기를 설정할 수 있습니다,You can set a OneRingTranslator in advanced settings,詳細設定でOneRingTranslatorを設定できます。,在高级设置中，可以设置自定义API,Anda dapat mengatur OneRingTranslator dalam pengaturan lanjutan,Вы можете установить OneRingTranslator в расширенных настройках,Pode definir um OneRingTranslator nas definições avançadas,Ви можете налаштувати OneRingTranslator у розширених налаштуваннях
 ,DeepLX Information,DeepLX용 엔드포인트를 선택합니다. 고급 설정에서 URL을 설정할 수도 있습니다.,Select Endpoint for DeepLX. You can also set your URL in the advanced settings.,DeepLX用のエンドポイントを選択します。詳細設定でURLを設定することもできます。,为 DeepLX 选择一个端点。您也可以在高级设置中设置 URL。,Pilih titik akhir untuk DeepLX. Anda juga dapat mengatur URL di pengaturan lanjutan.,Выберите конечную точку для DeepLX. Вы также можете задать URL в расширенных настройках.,Selecione um endpoint para o DeepLX. Também é possível definir o URL nas configurações avançadas.,Виберіть кінцеву точку для DeepLX. Ви також можете вказати URL-адресу в додаткових налаштуваннях.
 ,DeepLX Free,무료 엔드포인트,Free Endpoint,無料エンドポイント,免费终点,Titik akhir gratis,Свободные конечные точки,Pontos finais livres,Безкоштовні кінцеві точки
 ,DeeplX Endpoint Free,공식 엔드포인트(무료),Offical Endpoint (Free),公式エンドポイント（無料）,官方端点（免费）,Titik akhir resmi (gratis),Официальная конечная точка (бесплатно),Ponto de extremidade oficial (gratuito),Офіційна кінцева точка (безкоштовно)
