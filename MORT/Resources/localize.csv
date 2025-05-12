@@ -182,6 +182,36 @@ Setting",高速設定,快速设置,Pengaturan cepat,Быстрая настро�
 налаштування"
 ,Tab Debuging,디버깅,Debugging,デバッグ,调试,Debugging,Отладка,Depuração,Відлагодження
 ,Label Debugging,디버깅,Debugging,デバッグ,调试,Debugging,Отладка,Depuração,Відлагодження
+,Debug Warning,"MORT 디버깅 기능을 활성화 합니다.
+개발, 진단용 기능이기 때문에 평상시에는 사용할 필요가 없습니다.
+디버깅을 활성화 했을 시 성능에 영향을 줄 수 있습니다.","Enables MORT debugging features.
+This is for development and diagnostics, so you don't need to use it normally.
+Enabling debugging may affect performance.","MORTデバッグ機能を有効にします。
+開発、診断用の機能なので、普段は使う必要はありません。
+デバッグを有効にした場合、パフォーマンスに影響を与える可能性があります。","启用 MORT 调试功能。
+这是用于开发和诊断的，所以正常情况下不需要使用。
+启用调试功能可能会影响性能。","Mengaktifkan fitur debugging MORT.
+Ini untuk pengembangan dan diagnostik, jadi Anda tidak 
+perlu menggunakannya secara normal.
+Mengaktifkan debugging dapat mempengaruhi kinerja.","Включает отладочные функции MORT.
+Это предназначено для разработки и диагностики, поэтому 
+в обычном режиме его использовать не нужно.
+Включение отладки может повлиять на производительность.","Ativa as funcionalidades de depuração MORT.
+Esta função destina-se ao desenvolvimento e diagnóstico, 
+pelo que não é necessário utilizá-la normalmente.
+A ativação da depuração pode afetar o desempenho.","Вмикає можливості налагодження MORT.
+Цей параметр призначено для розробки та діагностики, 
+тому вам не потрібно використовувати його у звичайному режимі.
+Увімкнення налагодження може вплинути на продуктивність."
+,Debug On,활성화,Enable,有効にする,启用,Aktifkan,Включить,Ativar,Увімкнути
+,Debug ShowReplace,교정사전 결과 표시,Displaying proofreading dictionary results,校正辞書の結果を表示する,显示校对词典结果,Menampilkan hasil pengoreksian kamus,Отображение результатов работы словаря,Mostrar os resultados do dicionário de revisão,Відображення результатів словника
+,Debug SaveCapture,이미지 캡쳐 원본 저장,Save the original image capture,オリジナル画像のキャプチャを保存,保存原始图像截图,Menyimpan pengambilan gambar asli,Сохранить исходный снимок изображения,Guardar a captura da imagem original,Збережіть оригінальний знімок зображення
+,Debug SaveCaptureResult,이미지 캡쳐 보정 결과 저장,Save image capture calibration results,画像キャプチャキャリブレーション結果の保存,保存图像捕捉校准结果,Menyimpan hasil kalibrasi pengambilan gambar,Сохранить результаты калибровки захвата изображения,Guardar os resultados da calibração da captura de imagem,Збереження результатів калібрування захоплення зображень
+,Debug UnlockSpeed,번역 속도 제한 해제,Turn off translation speed limits,翻訳速度制限をオフにする,关闭翻译限速,Menonaktifkan batas kecepatan terjemahan,Отключить ограничения скорости перевода,Desativar os limites de velocidade de tradução,Вимкнути обмеження швидкості перекладу
+,Debug ShowFormerLog,번역 기억하기 결과 출력,Memorize translation results output,翻訳結果の出力を記憶,记忆翻译结果输出,Menghafal keluaran hasil terjemahan,Запоминание результатов перевода,Memorizar o resultado da tradução,Запам'ятати виведення результатів перекладу
+,Debug ClearFormerResult,번역 기억하기 모두 삭제,Delete all remembered translations,覚えている翻訳をすべて削除する,删除所有记忆翻译,Menghapus semua terjemahan yang diingat,Удалить все запомненные переводы,Eliminar todas as traduções recordadas,Видалити всі запам'ятовані переклади
+,Debug SetLineTrans,줄 단위로 번역하기 (문장단위로 번역하기 사용 안 함),Translate line by line (disable Translate sentence by sentence),行ごとに翻訳する（文ごとに翻訳を無効にする,逐行翻译（禁用逐句翻译,Menerjemahkan baris demi baris (nonaktifkan Terjemahkan kalimat demi kalimat),Переводить строку за строкой (отключите функцию «Переводить предложение за предложением»),Traduzir linha a linha (desativar Traduzir frase a frase),Перекладати рядок за рядком (вимкнути Перекладати речення за реченням)
+,Debug ShowOverlayWordArea,오버레이 번역창 - 문자 영역 보이기,Overlay Translation Pane - Show Character Area,オーバーレイ変換ペイン - 文字領域を表示,叠加翻译窗格 - 显示特征区域,Panel Terjemahan Hamparan - Tampilkan Area Karakter,Панель перевода наложения - Показать область символов,Painel de tradução de sobreposição - Mostrar área de carácter,Панель перекладу накладання - Показати область символів
 ,Panel Translate,번역 설정,Translation setting,翻訳設定,翻译设置,Pengaturan terjemahan,Настройка перевода,Configuração de tradução,Налаштування перекладу
 ,Panel Adjust Img,이미지 보정,Image Adjust,画像補正,图像校正,Koreksi Gambar,Коррекция изображения,Correção da imagem,Налаштування зображення
 ,Show OCR Result,OCR 결과 출력,OCR results output,OCRの結果出力,OCR结果输出,Output hasil OCR,Результаты OCR,Resultados do OCR Saída,Вивід результатів OCR

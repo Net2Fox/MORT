@@ -307,6 +307,17 @@ namespace MORT
 
             //디버깅
             lbDebugging.LocalizeLabel("Label Debugging");
+            cbShowReplace.LocalizeLabel("Debug ShowReplace");
+            cbSaveCapture.Text = $"{LocalizeManager.LocalizeManager.GetLocalizeString("Debug SaveCapture")} - captue_Original.bmp";
+            cbSaveCaptureResult.Text = $"{LocalizeManager.LocalizeManager.GetLocalizeString("Debug SaveCaptureResult")} - captue_Result.bmp";
+            cbUnlockSpeed.LocalizeLabel("Debug UnlockSpeed");
+            cbShowFormerLog.LocalizeLabel("Debug ShowFormerLog");
+            btClearFormerResult.LocalizeLabel("Debug ClearFormerResult");
+            cbSetLineTrans.LocalizeLabel("Debug SetLineTrans");
+            cbShowOverlayWordArea.LocalizeLabel("Debug ShowOverlayWordArea");
+
+            label63.LocalizeLabel("Debug Warning");
+            btnDebugOn.LocalizeLabel("Debug On");
         }
 
         void IGoogleBasicTranslateAPIContract.UpdateCondition(string key)

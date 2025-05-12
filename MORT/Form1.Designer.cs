@@ -3817,7 +3817,7 @@ namespace MORT
             btnDebugOn.ForeColor = System.Drawing.Color.White;
             btnDebugOn.Location = new System.Drawing.Point(212, 158);
             btnDebugOn.Name = "btnDebugOn";
-            btnDebugOn.Size = new System.Drawing.Size(56, 23);
+            btnDebugOn.Size = new System.Drawing.Size(80, 23);
             btnDebugOn.TabIndex = 46;
             btnDebugOn.Text = "활성화";
             btnDebugOn.UseVisualStyleBackColor = false;
