@@ -29,165 +29,167 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
-            this.lbVersion = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbDicversion = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            lbVersion = new System.Windows.Forms.Label();
+            linkLabel1 = new System.Windows.Forms.LinkLabel();
+            lbCreator = new System.Windows.Forms.Label();
+            lbLogo = new System.Windows.Forms.Label();
+            lbDicversion = new System.Windows.Forms.Label();
+            label8 = new System.Windows.Forms.Label();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            linkLabel3 = new System.Windows.Forms.LinkLabel();
+            label11 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            lbAbout = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // lbVersion
             // 
-            this.lbVersion.AutoSize = true;
-            this.lbVersion.Location = new System.Drawing.Point(15, 276);
-            this.lbVersion.Name = "lbVersion";
-            this.lbVersion.Size = new System.Drawing.Size(142, 12);
-            this.lbVersion.TabIndex = 2;
-            this.lbVersion.Text = "버전 : 1.19dv- 2019 10 05";
-            this.lbVersion.Click += new System.EventHandler(this.label2_Click);
+            lbVersion.AutoSize = true;
+            lbVersion.Location = new System.Drawing.Point(17, 460);
+            lbVersion.Name = "lbVersion";
+            lbVersion.Size = new System.Drawing.Size(175, 20);
+            lbVersion.TabIndex = 2;
+            lbVersion.Text = "버전 : 1.19dv- 2019 10 05";
+            lbVersion.Click += label2_Click;
             // 
             // linkLabel1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(96, 420);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(191, 12);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://blog.naver.com/killkimno";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            linkLabel1.AutoSize = true;
+            linkLabel1.Location = new System.Drawing.Point(110, 700);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new System.Drawing.Size(225, 20);
+            linkLabel1.TabIndex = 7;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "https://blog.naver.com/killkimno";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
-            // label3
+            // lbCreator
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 297);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 12);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "제작자 : 몽키해드 (김무영)";
+            lbCreator.AutoSize = true;
+            lbCreator.Location = new System.Drawing.Point(17, 495);
+            lbCreator.Name = "lbCreator";
+            lbCreator.Size = new System.Drawing.Size(184, 20);
+            lbCreator.TabIndex = 3;
+            lbCreator.Text = "제작자 : 몽키해드 (김무영)";
             // 
-            // label5
+            // lbLogo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 318);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 12);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "로고 : 김마손";
+            lbLogo.AutoSize = true;
+            lbLogo.Location = new System.Drawing.Point(18, 530);
+            lbLogo.Name = "lbLogo";
+            lbLogo.Size = new System.Drawing.Size(95, 20);
+            lbLogo.TabIndex = 9;
+            lbLogo.Text = "로고 : 김마손";
             // 
             // lbDicversion
             // 
-            this.lbDicversion.AutoSize = true;
-            this.lbDicversion.Location = new System.Drawing.Point(16, 389);
-            this.lbDicversion.Name = "lbDicversion";
-            this.lbDicversion.Size = new System.Drawing.Size(93, 12);
-            this.lbDicversion.TabIndex = 10;
-            this.lbDicversion.Text = "교정사전 버전 : ";
+            lbDicversion.AutoSize = true;
+            lbDicversion.Location = new System.Drawing.Point(18, 648);
+            lbDicversion.Name = "lbDicversion";
+            lbDicversion.Size = new System.Drawing.Size(114, 20);
+            lbDicversion.TabIndex = 10;
+            lbDicversion.Text = "교정사전 버전 : ";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 420);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 12);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "몽키해드 : ";
+            label8.AutoSize = true;
+            label8.Location = new System.Drawing.Point(18, 700);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(80, 20);
+            label8.TabIndex = 11;
+            label8.Text = "몽키해드 : ";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::MORT.Properties.Resources.about;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(540, 380);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox1.Image = Properties.Resources.about;
+            pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(540, 380);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click_1;
             // 
             // linkLabel3
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(96, 441);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(194, 12);
-            this.linkLabel3.TabIndex = 16;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "http://blog.naver.com/sabon2000";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            linkLabel3.AutoSize = true;
+            linkLabel3.Location = new System.Drawing.Point(110, 735);
+            linkLabel3.Name = "linkLabel3";
+            linkLabel3.Size = new System.Drawing.Size(231, 20);
+            linkLabel3.TabIndex = 16;
+            linkLabel3.TabStop = true;
+            linkLabel3.Text = "http://blog.naver.com/sabon2000";
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(16, 441);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 12);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "김마손 :";
+            label11.AutoSize = true;
+            label11.Location = new System.Drawing.Point(18, 735);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(61, 20);
+            label11.TabIndex = 15;
+            label11.Text = "김마손 :";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 368);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 12);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "OCR : TesseractOCR 5.2v, NHocr 0.21";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(18, 613);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(249, 20);
+            label2.TabIndex = 17;
+            label2.Text = "OCR : TesseractOCR 5.2v, NHocr 0.21";
             // 
-            // label1
+            // lbAbout
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 339);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 12);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "About : irismisha";
+            lbAbout.AutoSize = true;
+            lbAbout.Location = new System.Drawing.Point(18, 565);
+            lbAbout.Name = "lbAbout";
+            lbAbout.Size = new System.Drawing.Size(119, 20);
+            lbAbout.TabIndex = 18;
+            lbAbout.Text = "About : irismisha";
             // 
             // About
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(539, 484);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.lbDicversion);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lbVersion);
-            this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "About";
-            this.Text = "About";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.SystemColors.Window;
+            ClientSize = new System.Drawing.Size(616, 807);
+            Controls.Add(lbAbout);
+            Controls.Add(label2);
+            Controls.Add(linkLabel3);
+            Controls.Add(label11);
+            Controls.Add(label8);
+            Controls.Add(lbDicversion);
+            Controls.Add(lbLogo);
+            Controls.Add(linkLabel1);
+            Controls.Add(lbCreator);
+            Controls.Add(lbVersion);
+            Controls.Add(pictureBox1);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            Name = "About";
+            Text = "About";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Label lbVersion;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbCreator;
+        private System.Windows.Forms.Label lbLogo;
         private System.Windows.Forms.Label lbDicversion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbAbout;
     }
 }

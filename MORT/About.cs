@@ -15,7 +15,15 @@ namespace MORT
         {
             InitializeComponent();
 
-            lbVersion.Text = "버전 : " + Properties.Settings.Default.MORT_VERSION + " - " + Properties.Settings.Default.MORT_RELEASE;
+            this.LocalizeLabel("About Text");
+
+            lbVersion.Text = $"{LocalizeManager.LocalizeManager.GetLocalizeString("About Version Text")} : {Properties.Settings.Default.MORT_VERSION} - {Properties.Settings.Default.MORT_RELEASE}";
+
+            lbCreator.Text = $"{LocalizeManager.LocalizeManager.GetLocalizeString("About Creator Text")} : 몽키해드 (김무영)";
+
+            lbLogo.Text = $"{LocalizeManager.LocalizeManager.GetLocalizeString("About Logo Text")} : 김마손";
+
+            lbAbout.Text = $"{LocalizeManager.LocalizeManager.GetLocalizeString("About Illustration Text")} : irismisha";
 
             int dicVersion = 0;
             string dicEngVersion = "";
@@ -33,10 +41,9 @@ namespace MORT
             {
                 dicJpnVersion = result;
             }
+            lbDicversion.Text = $"{LocalizeManager.LocalizeManager.GetLocalizeString("About DicVersion Text")} : {LocalizeManager.LocalizeManager.GetLocalizeString("en")} - {dicEngVersion} / {LocalizeManager.LocalizeManager.GetLocalizeString("ja")} - {dicJpnVersion}";
 
-            lbDicversion.Text = "교정사전 버전 : 영문 - " + dicEngVersion + " / 일본어 - " + dicJpnVersion;
 
-          
         }
 
 

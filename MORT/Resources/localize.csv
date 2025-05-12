@@ -48,7 +48,7 @@ Guaaaahhhhhh"
 ,HSV,HSV,HSV,HSV,HSV,HSV,HSV,HSV,HSV
 ,Threshold,임계값,Threshold,しきい値,临界点,Ambang,Порог,Limite,Поріг
 ,,,,,,,,,
-,Language ETC,기타,ETC,等,其它,dll.,И т.д.,etc.,Інше
+,Language ETC,기타,ETC,等,其它,dll.,Прочее,etc.,Інше
 ,AUTO,자동,Auto,自動,自动,otomatis,Автоматический,automático,Авто
 언어코드 번역,en,영어,English,英語,英语,bahasa inggris,Английский,inglês,Англійська
 ,ja,일본어,Japanese,日本,日语,Jepang,Японский,japonês,Японська
@@ -155,10 +155,10 @@ EzTrans XP має бути встановлений
 ,HotKey Hide Trnas Window,번역창 숨기기 : ,Hide translation :,翻訳ウィンドウを非表示：,隐藏翻译窗口：,Sembunyikan Jendela Terjemahan:,Скрыть окно перевода:,Ocultar a janela de tradução:,Приховати переклад:
 ,HotKey Information,"ESC, 백스페이바로 비울 수 있습니다.",You can empty it with ESC or backspacebar,ESCは、backspabaで空にすることができます。,可使用ESC或退格键清除,ESC bisa kosong dengan Backspaba.,Можно оставить пустым при помощи ESC или Backspace.,ESC pode estar vazio com backspaba.,"Можна очистити на ESC, Backspace"
 ,Common Clear,비우기,Empty,空になる,清空,Endapan,Очистить,Esvaziando,Немає
-,Common ETC,그 외,ETC,等,其它,dll.,И т.д.,etc.,Інше
+,Common ETC,그 외,ETC,等,其它,dll.,Прочее,etc.,Інше
 ,Mort Guide,MORT 사용법,MORT - How to Use,モートの使用,使用MORT的指南,Penggunaan mort,MORT - Как пользоваться,Uso de mort,Як користуватися MORT
 ,Error List,에러 메세지 목록,Error Message List,エラーメッセージリスト,错误消息列表,Daftar Pesan Kesalahan,Список ошибок,Lista de mensagens de erro,Список помилок
-,Link,링크,Link,リンク,链接,tautan,Ссылка,link,Посилання
+,Link,링크,Link,リンク,链接,tautan,Ссылки,link,Посилання
 ,Link Github,Github로 이동,Github,Githubに移動します,转到Github,Pergi ke GitHub,Перейти к GitHub,Vá para o Github,GitHub
 ,Link Blog,블로그 방문,Blog,ブログ訪問,访问博客,Kunjungan blog,Перейти в блог,Visita ao blog,Блог
 ,Link Discord,디스코드 채널로 이동,Discord,不一致チャンネルに移動します,转到Discord频道,Pindah ke saluran Perselisihan,Перейти на канал Discord,Mover para o canal Discord,Discord
@@ -176,7 +176,7 @@ EzTrans XP має бути встановлений
 ,Tab Text,텍스트,Text,文章,文本,teks,Текст,texto,Текст
 ,Tab Extra,부가설정,Additional,追加の設定,附加设置,Pengaturan tambahan,Дополнительно,Configuração adicional,Додатково
 ,Tab Translation,번역설정,Translation,翻訳設定,翻译设置,Pengaturan terjemahan,Настройка перевода,Configuração de tradução,Переклад
-,Tab ETC,그 외,ETC,等,其它,dll.,И т.д.,etc.,Інше
+,Tab ETC,그 외,ETC,等,其它,dll.,Прочее,etc.,Інше
 ,Tab Quick Setting,빠른설정,"Quick
 Setting",高速設定,快速设置,Pengaturan cepat,Быстрая настройка,Configuração rápida,"Швидке
 налаштування"
@@ -1048,3 +1048,10 @@ Você gostaria de ir para a página de download?","Не вдалося онов�
 ,TOOLTIP_RGB,추출할 문장의 폰트색이 완벽한 단색일 때 사용합니다.,It is used when the font color of the text to be extracted is a perfectly solid color.,抽出される文のフォント色が完璧な固体色である場合に使用されます。,当要提取的句子的字体颜色是完美的纯色时，它被使用。,Ini digunakan ketika warna font dari kalimat yang akan diekstraksi adalah warna solid yang sempurna.,"Он используется, когда цвет шрифта предложения, подлежащего извлечению, является идеальным сплошным цветом.",É usado quando a cor da fonte da frase a ser extraída é de cor sólida perfeita.,"Він використовується, коли колір шрифту, який слід витягнути, є ідеальним суцільним кольором."
 ,TOOLTIP_HSV,색 영역을 이용해 추출한 문장의 폰트색을 지정합니다.,Specify the font color of the extracted text using the color area.,色の領域を使用して、抽出された文のフォント色を指定します。,使用颜色区域指定提取句子的字体颜色。,Tentukan warna font dari kalimat yang diekstraksi menggunakan area warna.,"Укажите цвет шрифта извлеченного предложения, используя область цвета.",Especifique a cor da fonte da frase extraída usando a área de cores.,Вкажіть колір шрифту витягнутого речення за допомогою кольорової області.
 ,ShowColorPickResultNullTarget,최소 하나 이상의 OCR 영역이 필요합니다,At least one OCR area is required.,少なくとも1つのOCRエリアが必要です,至少需要一个OCR区域,Setidaknya satu area OCR diperlukan,Требуется как минимум одна зона OCR,Pelo menos uma área de OCR é necessária,Принаймні одна область OCR потрібна
+,About Version Text,버전,Version,バージョン,版本,Versi,Версия,Versão,Версія
+,About DicVersion Text,교정사전 버전,Proofreading dictionary version,ルーフリーディング辞書バージョン,校对词典版本,Mengoreksi versi kamus,Версия словаря для коррекции,Revisão da versão do dicionário,Коректура словникової версії
+,About Creator Text,제작자,Creator,クリエイター,创作者,Pencipta,Создатель,Criador,Творець
+,About Logo Text,로고,Logo,ロゴ,标志,Logo,Лого,Logótipo,Логотип
+,About Illustration Text,일러스트레이션 정보,Illustration About,イラストレーションについて,插图 关于,Ilustrasi Tentang,Иллюстрация «О программе»,Ilustração Sobre,Ілюстрація про
+,About Text,정보,About,について,关于,Tentang,О программе,Sobre,Про програму
+
