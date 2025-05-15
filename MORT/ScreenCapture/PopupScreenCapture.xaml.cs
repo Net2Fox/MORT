@@ -26,6 +26,7 @@ using System.Collections.ObjectModel;
 using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
 using System.Windows.Threading;
+using System.Windows.Controls.Primitives;
 
 namespace MORT.ScreenCapture
 {
@@ -74,7 +75,7 @@ namespace MORT.ScreenCapture
 
                 if (hWnd == IntPtr.Zero)
                 {
-                    if (MessageBox.Show(_attachError, "오류", MessageBoxButton.OK) == MessageBoxResult.OK)
+                    if (MessageBox.Show(_attachError, LocalizeManager.LocalizeManager.GetLocalizeString("Error Title"), MessageBoxButton.OK) == MessageBoxResult.OK)
                     {
                         Close();
                     }
@@ -92,7 +93,7 @@ namespace MORT.ScreenCapture
                     sample.StartCaptureFromItem(item, hWnd, _enableYellowBoard, out borderStateType);
                     callback();
 
-                    lbInfo.Content = _attachComplete + item.DisplayName;
+                    lbInfo.Content = $"{_attachComplete} - {item.DisplayName}";
 
                     switch (borderStateType)
                     {
@@ -116,30 +117,29 @@ namespace MORT.ScreenCapture
             }
         }
 
-        private void Localize(bool useEnglish)
+        private void Localize()
         {
-            if (useEnglish)
-            {
-                btAttach.Content = "Attach window";
-                btStop.Content = "Stop";
-                _waitingAttach = "State : Waiting attach";
-                _attachError = "State : Can't attach this window" + System.Environment.NewLine + "Make sure Windows is active";
-                _attachComplete = "State : Capturing";
-                _stopAttach = "State : Stop";
-                _borderEnable = "Enable Yellow Border";
-                _borderDisable = "Disable Yellow Border";
-                _borderForceEnable = "Enable Yellow Border (Deactivation is only possible in Windows 11)";
-            }
+            this.Title = LocalizeManager.LocalizeManager.GetLocalizeString("Attach Popup Title");
 
+            btAttach.Content = LocalizeManager.LocalizeManager.GetLocalizeString("Attach Start Button");
+            btStop.Content = LocalizeManager.LocalizeManager.GetLocalizeString("Attach Stop Button");
+
+            _waitingAttach = LocalizeManager.LocalizeManager.GetLocalizeString("Attach Waiting");
+            _attachError = $"{LocalizeManager.LocalizeManager.GetLocalizeString("Attach Error")}\n{LocalizeManager.LocalizeManager.GetLocalizeString("Attach Error2")}";
+            _attachComplete = LocalizeManager.LocalizeManager.GetLocalizeString("Attach Complete");
+            _stopAttach = LocalizeManager.LocalizeManager.GetLocalizeString("Attach Stop");
+            _borderEnable = LocalizeManager.LocalizeManager.GetLocalizeString("Attach BorderEnable");
+            _borderDisable = LocalizeManager.LocalizeManager.GetLocalizeString("Attach BorderDisable");
+            _borderForceEnable = LocalizeManager.LocalizeManager.GetLocalizeString("Attach BorderForceEnable");
         }
 
-        public void Start(Action callback, Action closeCallback, Action stopCallback, bool useEnglish, bool enableYellowBoard)
+        public void Start(Action callback, Action closeCallback, Action stopCallback, bool enableYellowBoard)
         {
             _enableYellowBoard = enableYellowBoard;
             this.callback = callback;
             this.closeCallback = closeCallback;
             this.stopCallback = stopCallback;
-            Localize(useEnglish);
+            Localize();
 
             PrepareCaptureAsync();
         }
@@ -243,7 +243,7 @@ namespace MORT.ScreenCapture
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
             InitComposition();
-       
+
         }
 
         private void Window_Closed_1(object sender, EventArgs e)

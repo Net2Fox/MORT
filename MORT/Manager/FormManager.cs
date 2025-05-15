@@ -47,7 +47,7 @@ namespace MORT
         public static int BorderHeight;
         public static int TitlebarHeight;
 
-        #endregion 
+        #endregion
 
 
         #region :::::::::::관리 폼::::::::::
@@ -92,7 +92,7 @@ namespace MORT
             return isRemain;
         }
 
-     
+
         public void CloseApplication()
         {
 
@@ -223,19 +223,16 @@ namespace MORT
                         MyMainForm.MySettingManager.isUseAttachedCapture = false;
                         screenCaptureUI = null;
                     }
-                   
+
                 };
 
-                bool useEnglish = LocalizeManager.LocalizeManager.Language == LocalizeManager.AppLanguage.English;
-
-
                 screenCaptureUI.Show();
-                screenCaptureUI.Start(callback, closeCallback, stopCallback, useEnglish, AdvencedOptionManager.EnableYellowBorder);
+                screenCaptureUI.Start(callback, closeCallback, stopCallback, AdvencedOptionManager.EnableYellowBorder);
             }
             else
             {
                 screenCaptureUI.Activate();
-            }      
+            }
         }
 
 
@@ -468,7 +465,7 @@ namespace MORT
             {
                 target = quickOcrAreaForm;
             }
-            
+
             if(target == null)
             {
                 FormManager.ShowPopupMessage("", LocalizeManager.LocalizeManager.GetLocalizeString("ShowColorPickResultNullTarget"));
@@ -534,7 +531,7 @@ namespace MORT
             }
             for (int i = 0; i < MyMainForm.MySettingManager.nowExceptionGroupCount; i++)
             {
-                screenForm.MakeAreaForm(screenForm.ScreenType.Exception, 
+                screenForm.MakeAreaForm(screenForm.ScreenType.Exception,
                     MyMainForm.MySettingManager.nowExceptionLocationXList[i], MyMainForm.MySettingManager.nowExceptionLocationYList[i],
                     MyMainForm.MySettingManager.nowExceptionSizeXList[i], MyMainForm.MySettingManager.nowExceptionSizeYList[i], isShowOcrRare);
 
@@ -582,7 +579,7 @@ namespace MORT
                 }
             }
         }
-         
+
         public void AddExceptionAreaForm(OcrAreaForm newForm)
         {
             exceptionAreaFormList.Add(newForm);
@@ -686,7 +683,7 @@ namespace MORT
             {
                 exceptionAreaFormList.RemoveAt(index - 1);
             }
-        
+
         }
 
         public int GetOcrAreaCount()
@@ -777,7 +774,7 @@ namespace MORT
                 MyRemoteController.Show();
             }
 
-         
+
 
         }
 
@@ -901,7 +898,7 @@ namespace MORT
         }
 
         public void ResetTemporaryDisableTopMostTransform()
-        {           
+        {
             var transform = GetITransform();
 
             if(transform != null)
@@ -938,7 +935,7 @@ namespace MORT
 
         public void MakeLayerTransForm(bool isTranslateFormTopMostFlag, bool isProcessTransFlag)
         {
-            
+
             if (MyLayerTransForm == null)
             {
                 MyLayerTransForm = new TransFormLayer();
@@ -960,7 +957,7 @@ namespace MORT
                 MyLayerTransForm.UpdateTransform();
             }
 
-           
+
             if (isProcessTransFlag == false)
             {
                 MyLayerTransForm.DisableOverHitLayer();
@@ -984,7 +981,7 @@ namespace MORT
                 MyOverTransForm.StartPosition = FormStartPosition.Manual;
 
                 //-----------v2
-                
+
                 var screens = Screen.AllScreens;
 
 
@@ -1009,7 +1006,7 @@ namespace MORT
                 //------------------
 
                 MyOverTransForm.SetTopMost(true, false);
-              
+
                 MyOverTransForm.UpdateTransform();
                 MyOverTransForm.HideTaksBar();
                 MyOverTransForm.Show();
@@ -1021,12 +1018,12 @@ namespace MORT
 
                 MyOverTransForm.SetTopMost(true, false);
                 MyOverTransForm.Activate();
-             
+
                 MyOverTransForm.UpdateTransform();
                 MyOverTransForm.Show();
             }
 
-      
+
 
 
             Util.ShowLog("Make over???????");
@@ -1088,9 +1085,9 @@ namespace MORT
             {
                 MyOverTransForm.VisibleOverlayTransAsync(waitTime);
             }
-      
+
         }
-     
+
 
         public void AddText(string addText)
         {
@@ -1136,10 +1133,10 @@ namespace MORT
         }
         public static void ShowTwoButtonPopupMessage(string title, string message, Action callback = null)
         {
-            DialogResult result = MessageBox.Show(new Form() { WindowState = FormWindowState.Maximized, TopMost = true }, message, title, 
+            DialogResult result = MessageBox.Show(new Form() { WindowState = FormWindowState.Maximized, TopMost = true }, message, title,
                         MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            
+
             if (result == DialogResult.Yes && callback != null)
             {
                 callback();

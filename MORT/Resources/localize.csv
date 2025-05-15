@@ -56,7 +56,7 @@ Guaaaahhhhhh"
 ,zh-TW,중국어 번체,Traditional Chinese,繁体字中国語,繁体中文,Cina tradisional,Традиционный китайский,Chinês tradicional,Традиційна китайська
 ,ch_sim,중국어 간체,Simplified Chinese,中国語,简体中文,Cina,Китайский,chinês,Спрощена китайська
 ,ch_tra,중국어 번체,Traditional Chinese,繁体字中国語,繁体中文,Cina tradisional,Традиционный китайский,Chinês tradicional,Традиційна китайська
-,es,스페인어,Spanish,スペイン語,西班牙语,Orang Spanyol,испанский,Espanhol,Іспанська
+,es,스페인어,Spanish,スペイン語,西班牙语,Orang Spanyol,Испанский,Espanhol,Іспанська
 ,fr,프랑스어,French,フランス語,法语,Perancis,Французский,Francês,Французька
 ,vi,베트남어,Vietnamese,ベトナム人,越南语,Orang Vietnam,Вьетнамский,vietnamita,В'єтнамська
 ,th,태국어,Thai,タイ,泰语,Thai,Тайский,tailandês,Тайська
@@ -147,7 +147,7 @@ EzTrans XP має бути встановлений
 ,Font Background Color,배경색,Background,背景色,背景颜色,Warna latar belakang,Фоновый цвет,Cor de fundo,Фон
 ,Set Default Color,기본색으로,Set Default Color,基本的に色,默认颜色,Pada dasarnya warna,Цвет по умолчанию,Basicamente cor,За замовчуванням
 ,HotKey,단축키,Hot Key,ショートカット,快捷键,Jalan pintas,Горячая клавиша,Atalho,Сполучення клавіш
-,HotKey Dic,교정 사전 열기 : ,Proofreading :,修正が開けられます：,打开校对字典：,Koreksi Pra -Open:,Вычитка(TODO):,Correção pré -abertura:,Правопис:
+,HotKey Dic,교정 사전 열기 : ,Proofreading :,修正が開けられます：,打开校对字典：,Koreksi Pra -Open:,Коррекция:,Correção pré -abertura:,Правопис:
 ,HotKey Do Trans,번역 시작/중지 : ,Translate On/Off :,翻訳の始まり/停止：,开始/停止翻译：,Awal Terjemahan/Berhenti:,Начало/Остановка перевода:,Início da tradução/parada:,Переклад увімк./вимк.:
 ,HotKey Quick OCR,빠른 OCR 영역 :,Quick OCR area :,高速OCRエリア：,快速OCR区域：,Area OCR cepat:,Быстрая зона OCR:,Área rápida de OCR:,Швидка область OCR:
 ,HotKey Snap Shot,스냅샷 :,Snapshot :,スナップショット：,快照：,Foto:,Снимок:,Instantâneo:,Знімок:
@@ -293,7 +293,7 @@ Se possível, use Tessract ou Winocr","В деяких ситуаціях роз
 ,OCR Google,Google - 스냅샷 전용,Google -Snapshot only,Google -Snapshotのみ,Google - 仅限截屏,Google -snapshot saja,Google - только снимок,Google -Snapshot Somente,Google - Тільки знімки
 ,OCR Easy OCR,Easy OCR,Easy OCR,Easy OCR,Easy OCR,Easy OCR,Easy OCR,Easy OCR,Easy OCR
 ,Font Additional Seting,부가설정,Additional setting,追加の設定,附加设置,Pengaturan tambahan,Дополнительные настройки,Configuração adicional,Додаткові налаштування
-,Font Center,가운데 정렬,Center alignment,中間アライメント,居中对齐,Alignment Tengah,выравнивание по центру,Alinhamento do meio,Вирівнювання по центру
+,Font Center,가운데 정렬,Center alignment,中間アライメント,居中对齐,Alignment Tengah,Выравнивание по центру,Alinhamento do meio,Вирівнювання по центру
 ,Font Remove Space,OCR 결과 공백 제거,OCR result Remove Spaces,OCRの結果除去,去除OCR结果空白,Penghapusan Hasil OCR,Удаление пробелов в OCR,Remoção de resultados de OCR,Усунення пробілів в результатах OCR
 ,Font Use BackGround Color,배경색 사용,Use Background color,背景色の使用,使用背景色,Penggunaan Warna Latar Belakang,Использование фонового цвета,Uso de cor de fundo,Використовувати колір фону
 ,Font Display Ocr Index,OCR 영역 번호 표시,Display OCR Area Index,OCRエリア番号インジケーター,显示OCR区域编号,Indikator Nomor Area OCR,Отобразить номре зоны OCR,Indicador de número da área de OCR,Відображення номерів областей OCR
@@ -567,7 +567,7 @@ Você pode definir a tela arrastando a tela no estado de configuração da área
 Ви можете встановити область перетягуванням екрана, коли область розпізнавання встановлена.
 "
 ,Common Next,다음,Next,次,下一步,Berikutnya,Далее,próximo,Далі
-,Quick Setting Font Setting,"번역할 게임의 폰트 색은 어떤 건가요?""","What is the font color of the translating game? """,翻訳ゲームのフォントカラーは何ですか？」,要翻译的游戏的字体颜色是什么？,"Apa warna font dari game penerjemahan? """,Какой цвет шрифта в переводимой игре? »,"Qual é a cor da fonte do jogo de tradução? ""","Який колір шрифту гри, що перекладається?"""
+,Quick Setting Font Setting,"번역할 게임의 폰트 색은 어떤 건가요?","What is the font color of the translating game?",翻訳ゲームのフォントカラーは何ですか？」,要翻译的游戏的字体颜色是什么？,"Apa warna font dari game penerjemahan?",Какой цвет шрифта в переводимой игре?,"Qual é a cor da fonte do jogo de tradução?","Який колір шрифту гри, що перекладається?"
 ,Quick Setting OCR Area Setting,게임 대사 영역 설정 - OCR 영역 설정,Game metabolic area setting -OCR area setting,ゲーム代謝領域の設定 - 極地エリア設定,设置游戏对话区域 - 设置OCR区域,Pengaturan Area Metabolik Game -Pengaturan Area OROCK,Настройки области игры - настройки области OCR,Configuração da área metabólica do jogo -Configuração da área de OOC,Налаштування області ігрового діалогу - Налаштування області розпізнавання
 ,Quick Setting OCR Area Button,OCR 영역 설정,OCR area setting,OCRエリア設定,设置OCR区域,Pengaturan Area OCR,Установка зоны OCR,Configuração da área de OCR,Налаштування області розпізнавання
 ,Quick Setting OCR Area Complete,OCR 영역 설정 완료,OCR area setting completed,OCRエリアの設定完了,设置OCR区域完成,Pengaturan area OCR selesai,Установка зоны OCR завершена,Conclusão da configuração da área de OCR,Налаштування регіону розпізнавання завершено
@@ -1084,4 +1084,15 @@ Você gostaria de ir para a página de download?","Не вдалося онов�
 ,About Logo Text,로고,Logo,ロゴ,标志,Logo,Лого,Logótipo,Логотип
 ,About Illustration Text,일러스트레이션 정보,Illustration About,イラストレーションについて,插图 关于,Ilustrasi Tentang,Иллюстрация «О программе»,Ilustração Sobre,Ілюстрація про
 ,About Text,정보,About,について,关于,Tentang,О программе,Sobre,Про програму
-
+,Attach Popup Title,캡처 창,Capture window,キャプチャウィンドウ,捕捉窗口,Jendela pengambilan,Захват окна,Janela de captura,Вікно захоплення
+,Attach Start Button,창 첨부,Attach window,ウィンドウを取り付ける,附加窗口,Lampirkan jendela,Прикрепить окно,Anexar janela,Прикріпити вікно
+,Attach Stop Button,중지,Stop,ストップ,停止,Berhenti,Остановить,Parar,Стоп
+,Attach Waiting,상태 : 윈도우 선택중,State: Waiting attach,状態： 待機中,状态： 等待附加,Menyatakan: Menunggu melampirkan,Статус: Ожидание прикрепления,Estado: Em espera anexar,Стан: Очікує вкладення
+,Attach Error,해당 윈도우는 캡쳐할 수 없습니다,State : Can't attach this window,状態： このウィンドウを添付できません,状态： 无法附加此窗口,Negara: Tidak dapat memasang jendela ini,Состояние: Невозможно прикрепить это окно,Estado: Não é possível anexar esta janela,Стан: Не вдається прикріпити це вікно
+,Attach Error2,윈도우가 활성화 되어 있는지 확인해 주세요,Make sure window is active,ウィンドウがアクティブであることを確認する,确保窗口处于活动状态,Pastikan jendela dalam keadaan aktif,"Убедитесь, что окно активно",Certificar-se de que a janela está ativa,"Переконайтеся, що вікно активне"
+,Attach Complete,상태 : 캡쳐 중,State: Capturing,状態 キャプチャ,国家： 捕捉,Negara: Menangkap,Статус: Захват,Estado: Capturar,Стан: Захоплення
+,Attach Stop,상태 : 캡쳐 중지,State: Stop,ステータス 停止,状态： 停止,Status: Berhenti,Статус: Стоп,Estado: Parar,Стан: Стоп
+,Attach BorderEnable,노란색 테두리 활성화,Enable Yellow Border,黄色のボーダーを有効にする,启用黄色边框,Aktifkan Perbatasan Kuning,Включить желтую рамку,Ativar a moldura amarela,Увімкнути жовту рамку
+,Attach BorderDisable,노란색 테두리 비활성화,Disable Yellow Border,黄色のボーダーを無効にする,禁用黄色边框,Menonaktifkan Perbatasan Kuning,Отключить желтую рамку,Desativar a moldura amarela,Вимкнути жовту рамку
+,Attach BorderForceEnable,노란색 테두리 활성화 (비활성화는 윈도우11에서만 가능),Enable Yellow Border (Deactivation is only possible in Windows 11),黄色のボーダーを有効にする（無効化はWindows 11でのみ可能）,启用黄色边框（仅可在 Windows 11 中停用）,Aktifkan Perbatasan Kuning (Penonaktifan hanya dapat dilakukan di Windows 11),Включить желтую рамку (отключение возможно только в Windows 11),Ativar a moldura amarela (a desativação só é possível no Windows 11),Увімкнути жовту рамку (деактивація можлива лише в Windows 11)
+,Error Title,오류,Error,エラー,错误,Kesalahan,Ошибка,Erro,Помилка
