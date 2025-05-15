@@ -34,7 +34,7 @@ namespace MORT
             }
         }
 
- 
+
 
         public FontColorType fontColorType = FontColorType.None;
         public SettingManager.TransType transType = SettingManager.TransType.google_url;
@@ -90,10 +90,9 @@ namespace MORT
     public class SettingManager
     {
         public enum Skin { dark, layer, over };   //앞 소문자 바꾸며 안 됨! -> 기존 버전과 호환성
-        public enum TransType { google_url, db, papago_web, naver, google, deepl, deeplx, ezTrans, customApi}; //앞 소문자 바꾸며 안 됨! -> 기존 버전과 호환성
+        public enum TransType { google_url, db, papago_web, naver, google, deepl, deeplxmissuo, ezTrans, customApi}; //앞 소문자 바꾸며 안 됨! -> 기존 버전과 호환성
         public enum OcrType { Tesseract = 0, Window = 1, NHocr = 2, Google = 3, EasyOcr = 4, Max = 5 };
         public enum SortType { Normal, Center };
-        public enum DeepLXEndpointType { Free = 0, Paid = 1, Official = 2 };
 
 
         TransType nowTransType;
@@ -122,8 +121,6 @@ namespace MORT
         public string DeepLTransCode { get; set; } = "en";
         public string DeepLResultCode { get; set; } = "en";
 
-        public DeepLXEndpointType nowDeepLXEndpointType = DeepLXEndpointType.Free;
-
 
         //윈도우 10 관련
         string windowLanguageCode = "";
@@ -135,7 +132,7 @@ namespace MORT
         string nowDicFile = "myDic.txt";
         Boolean nowIsUseDicFileFlag = true;
         Boolean nowIsUseErodeFlag = false;
-       
+
         public bool isUseMatchWordDic = true;
         int nowColorGroupCount = 1;
         Boolean nowIsUseRGBFlag = false;
@@ -147,7 +144,7 @@ namespace MORT
         List<List<int>> useColorGroup = new List<List<int>>();
         List<int> quickOcrUseColorGroup = new List<int>();
         List<ColorGroup> nowColorGroup = new List<ColorGroup>();
-        
+
         //OCR 영역 수
         int nowOCRGroupcount = 0;
         List<int> nowLocationXList = new List<int>();
@@ -617,7 +614,7 @@ namespace MORT
                         nowColorGroup.Add(value[i]);
                     }
                 }
-                
+
             }
         }
 
@@ -769,7 +766,7 @@ namespace MORT
         public Rectangle GetCaptureFullArea()
         {
             Rectangle resultRect = new Rectangle(1,1,1,1);
-            
+
             if(nowLocationXList.Count > 0)
             {
                 int x = nowLocationXList[0];
@@ -791,13 +788,13 @@ namespace MORT
                     resultRect = Rectangle.Union(resultRect, rect);
                 }
             }
-     
+
 
 
             return resultRect;
         }
 
-        
+
         public int GetLocationX(int index)
         {
             int x = 0;
@@ -852,7 +849,7 @@ namespace MORT
                     //빠른 테저렉 사용
                     string fastTess = "#USE_FAST_TESS = @";
                     fastTess = fastTess + nowIsFastTess.ToString();
-                    newTask.WriteLine(fastTess, StringComparison.InvariantCulture);           
+                    newTask.WriteLine(fastTess, StringComparison.InvariantCulture);
 
 
                     //ocr 결과 보여주기
@@ -929,10 +926,6 @@ namespace MORT
                     //번역 방식
                     string transTypeString = "#TRANS_TPYE = @" + nowTransType.ToString();
                     newTask.WriteLine(transTypeString, StringComparison.InvariantCulture);
-
-                    // EndpointType
-                    string endpointTypeString = "#ENDPOINT_TPYE = @" + nowDeepLXEndpointType.ToString();
-                    newTask.WriteLine(endpointTypeString, StringComparison.InvariantCulture);
 
                     //db 파일
                     string dbFileString = "#DB_FILE = @" + nowDBFile;
@@ -1091,7 +1084,7 @@ namespace MORT
                     //이미지 리사이즈 크기
                     string imgZoomSizeString = "#IMG_ZOOM_SIZE = @" + string.Format("{0:F1}", imgZoomSize, StringComparison.InvariantCulture);
                     newTask.WriteLine(imgZoomSizeString, StringComparison.InvariantCulture);
-                   
+
 
                     //TTS 사용 여부
                     string text = "#USE_TTS = @";
@@ -1413,7 +1406,7 @@ namespace MORT
                         }
                     }
 
-              
+
                     else if (line.StartsWith("#NAVER_TRANS_CODE", StringComparison.InvariantCulture))
                     {
                         int index = line.IndexOf("@", StringComparison.InvariantCulture);
@@ -1515,7 +1508,7 @@ namespace MORT
 
                     }
                     else if (line.StartsWith("#OCR_SPEED", StringComparison.InvariantCulture))
-                    {                        
+                    {
                         int index = line.IndexOf("@", StringComparison.InvariantCulture);
 ;
                         if (index != -1)
@@ -1591,32 +1584,32 @@ namespace MORT
                             {
                                 nowTransType = TransType.customApi;
                             }
-                            else if (resultString.CompareTo("deeplx") == 0)
+                            else if (resultString.CompareTo("deeplxmissuo") == 0)
                             {
-                                nowTransType = TransType.deeplx;
+                                nowTransType = TransType.deeplxmissuo;
                             }
                         }
                     }
-                    else if(line.StartsWith("#ENDPOINT_TPYE", StringComparison.InvariantCulture))
-                    {
-                        int index = line.IndexOf("@", StringComparison.InvariantCulture);
-                        if (index != -1)
-                        {
-                            string resultString = line.Substring(index + 1);
-                            if (resultString.CompareTo("Free") == 0)
-                            {
-                                nowDeepLXEndpointType = DeepLXEndpointType.Free;
-                            }
-                            else if (resultString.CompareTo("Paid") == 0)
-                            {
-                                nowDeepLXEndpointType = DeepLXEndpointType.Paid;
-                            }
-                            else if (resultString.CompareTo("Official") == 0)
-                            {
-                                nowDeepLXEndpointType = DeepLXEndpointType.Official;
-                            }
-                        }
-                    }
+                    // TODO Replace to APIKEY? else if(line.StartsWith("#ENDPOINT_TPYE", StringComparison.InvariantCulture))
+                    //{
+                    //    int index = line.IndexOf("@", StringComparison.InvariantCulture);
+                    //    if (index != -1)
+                    //    {
+                    //        string resultString = line.Substring(index + 1);
+                    //        if (resultString.CompareTo("Free") == 0)
+                    //        {
+                    //            nowDeepLXMissuoEndpointType = DeepLXMissuoEndpointType.Free;
+                    //        }
+                    //        else if (resultString.CompareTo("Paid") == 0)
+                    //        {
+                    //            nowDeepLXMissuoEndpointType = DeepLXMissuoEndpointType.Paid;
+                    //        }
+                    //        else if (resultString.CompareTo("Official") == 0)
+                    //        {
+                    //            nowDeepLXMissuoEndpointType = DeepLXMissuoEndpointType.Official;
+                    //        }
+                    //    }
+                    //}
                     else if (line.StartsWith("#DB_FILE", StringComparison.InvariantCulture))
                     {
                         int index = line.IndexOf("@", StringComparison.InvariantCulture);
@@ -1973,7 +1966,7 @@ namespace MORT
                         {
                             imgZoomSize = 2;
                         }
-                   
+
                     }
                     else if (line.StartsWith("#USE_TTS", StringComparison.InvariantCulture))
                     {
@@ -2025,7 +2018,7 @@ namespace MORT
         }
 
         private void ParseBoolData(string line, ref bool boolValue)
-        {            
+        {
             int index = line.IndexOf("@", StringComparison.InvariantCulture);
             if (index != -1)
             {
@@ -2038,7 +2031,7 @@ namespace MORT
                 {
                     boolValue = false;
                 }
-            }            
+            }
         }
 
         private void ParseIntData(string line, ref int value)
